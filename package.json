@@ -1,8 +1,8 @@
 {
-  "homepage": "http://demitycho.github.io/react-cv",
   "name": "react-cv",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://demitycho.github.io/react-cv",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -17,6 +17,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "react-scripts": "1.1.4"
   }
 }
