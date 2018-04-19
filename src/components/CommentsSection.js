@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Comment from './Comment.js';
 import CommentnputField from "./CommentnputField";
-import './App.css';
+import '../App.css';
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
