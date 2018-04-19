@@ -4,8 +4,8 @@ import AboutMe from './components/AboutMe.js';
 import Credentials from './components/Credentials.js';
 import EducationList from './components/EducationList.js';
 import './App.css';
-import { Menu, Dropdown, Image, Icon } from 'semantic-ui-react';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Menu } from 'semantic-ui-react';
+import { Link, Element } from 'react-scroll'
 
 const styles = {
   root: {

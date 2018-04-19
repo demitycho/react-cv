@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CredentialData from '../data/CredentialData.js'
 import Credential from './Credential.js'
-import { Header, Item, Segment } from 'semantic-ui-react'
+import { Header, Icon, Item, Segment } from 'semantic-ui-react'
 
 const styles = {
   padded: {
@@ -13,7 +13,9 @@ class Credentials extends Component {
   render(){
     return(
       <Segment padded="very" style={styles.padded}>
-        <Header size='large'>Credentials</Header>
+        <Header size='large'>
+          <Icon name="user" />Credentials
+        </Header>
         <Item.Group divided>
           {CredentialData.map(credential => (
             <Credential

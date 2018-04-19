@@ -26,7 +26,10 @@ class CommentsSection extends Component {
   render() {
     return (
       <Comment.Group style={styles.padded}>
-        <Header as='h2' dividing>Comments</Header>
+        <Header as='h2' dividing>
+          Comments
+
+          </Header>
           {this.props.allPostsQuery.allPosts && this.props.allPostsQuery.allPosts.map(post => (
             <MyComment
                 key={post.id}

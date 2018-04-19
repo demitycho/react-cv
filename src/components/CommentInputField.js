@@ -8,7 +8,7 @@ const styles = {
     marginTop: "3%",
   }
 }
-class CommentInputField extends React.Component {
+class CommentInputField extends Component {
 
   constructor(props) {
     super(props);
