@@ -41,7 +41,6 @@ class App extends Component {
           >
             About Me
           </Menu.Item>
-
           <Menu.Item
               style={styles.item}
               name='Credentials'
@@ -50,7 +49,6 @@ class App extends Component {
           >
             Credentials
           </Menu.Item>
-
           <Menu.Item
               style={styles.item}
               name='education'
