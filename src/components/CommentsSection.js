@@ -6,6 +6,14 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Header, Comment } from 'semantic-ui-react'
 
+const styles = {
+  padded: {
+    marginTop: "2em",
+    marginBottom: "2em",
+    minHeight: "1000px",
+    minWidth: "100%"
+  }
+}
 class CommentsSection extends Component {
   componentWillReceiveProps(nextProps) {
       // if (this.props.location.key !== nextProps.location.key) {
@@ -17,7 +25,7 @@ class CommentsSection extends Component {
   }
   render() {
     return (
-      <Comment.Group className="Comments-Section">
+      <Comment.Group style={styles.padded}>
         <Header as='h2' dividing>Comments</Header>
           {this.props.allPostsQuery.allPosts && this.props.allPostsQuery.allPosts.map(post => (
             <MyComment

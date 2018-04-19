@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import AboutMeData from "../data/AboutMeData"
 import { Header, Image, Segment } from 'semantic-ui-react'
-
+import weihao from '../images/Tan_Wei_Hao.png'
 const lower = {
   marginTop: "3.5em",
 }
 class AboutMe extends Component {
   render() {
     return(
-      <Segment raised style={lower}>
+      <Segment raised style={lower} padded="very">
         <Header size='large'>About Me</Header>
-        <Image centered circular size='medium' src='https://i.imgur.com/2pMUrcD.jpg' />
+        <Image centered circular size='small' src={weihao} />
         <Header as='h3' icon textAlign='center'>
           <Header.Content>
             {AboutMeData.name}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { graphql} from 'react-apollo';
-import { Form, Header } from 'semantic-ui-react'
+import { Button, Form, Header } from 'semantic-ui-react'
 
 const styles = {
   lower: {
@@ -44,7 +44,7 @@ class CommentInputField extends React.Component {
           <Header dividing as='h4' style={styles.lower}>Tell me anything!</Header>
           Your name: <input type="text" name="FirstName" onChange={this.handleNameChange}/>
           Comment: <Form.TextArea onChange={this.handleCommentChange}/>
-          <button type="button"  onClick={this.handlePost}>Comment!</button>
+          <Button type="button"  onClick={this.handlePost}>Comment!</Button>
         </Form>
     );
   }
