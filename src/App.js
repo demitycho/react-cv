@@ -71,9 +71,7 @@ class App extends Component {
         <div style={styles.body}>
           <AboutMe />
           <Credentials />
-          <div>divider</div>
           <EducationList />
-          <div>divider</div>
           <CommentSection />
         </div>
       </div>
