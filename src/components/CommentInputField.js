@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { graphql} from 'react-apollo';
+import { Form, Header } from 'semantic-ui-react'
 
-class CommentnputField extends React.Component {
+const styles = {
+  lower: {
+    marginTop: "3%",
+  }
+}
+class CommentInputField extends React.Component {
 
   constructor(props) {
     super(props);
@@ -29,15 +35,17 @@ class CommentnputField extends React.Component {
     const {comment, name} = this.state
     await this.props.createPostMutation({variables: {comment, name}})
     this.props.createPost();
+
   }
 
   render() {
     return (
-        <form>
-          Name: <input type="text" name="FirstName" onChange={this.handleNameChange}/>
-          Comment: <input type="text" name="LastName" onChange={this.handleCommentChange}/>
+        <Form>
+          <Header dividing as='h4' style={styles.lower}>Tell me anything!</Header>
+          Your name: <input type="text" name="FirstName" onChange={this.handleNameChange}/>
+          Comment: <Form.TextArea onChange={this.handleCommentChange}/>
           <button type="button"  onClick={this.handlePost}>Comment!</button>
-        </form>
+        </Form>
     );
   }
 }
@@ -50,6 +58,6 @@ const CREATE_POST_MUTATION = gql`
   }
 `
 
-const CreateCommentWithMutation = graphql(CREATE_POST_MUTATION, {name: 'createPostMutation'})(CommentnputField)
+const CreateCommentWithMutation = graphql(CREATE_POST_MUTATION, {name: 'createPostMutation'})(CommentInputField)
 
 export default CreateCommentWithMutation;

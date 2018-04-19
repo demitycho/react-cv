@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Comment from './Comment.js';
-import CommentnputField from "./CommentnputField";
+import MyComment from './MyComment.js';
+import CommentInputField from "./CommentInputField";
 import '../App.css';
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
+import { Header, Comment } from 'semantic-ui-react'
 
 class CommentsSection extends Component {
   componentWillReceiveProps(nextProps) {
@@ -16,19 +17,17 @@ class CommentsSection extends Component {
   }
   render() {
     return (
-      <div className="Comments-Section">
-        {this.props.allPostsQuery.allPosts && this.props.allPostsQuery.allPosts.map(post => (
-            <Comment
+      <Comment.Group className="Comments-Section">
+        <Header as='h2' dividing>Comments</Header>
+          {this.props.allPostsQuery.allPosts && this.props.allPostsQuery.allPosts.map(post => (
+            <MyComment
                 key={post.id}
                 post={post}
                 refresh={() => this.props.allPostsQuery.refetch()}
             />
-        ))}
-        <CommentnputField
-            createPost = {this.createPost}
-        />
-
-      </div>
+          ))}
+          <CommentInputField createPost = {this.createPost} />
+      </Comment.Group>
     );
   }
 }
